@@ -1,0 +1,44 @@
+#chat {
+  float: left;
+  @include column-row(1/span 1, 2/span 1);
+  display: flex;
+  border: 2px solid $bright-teal;
+  background-color: $transparent;
+  height: 420px;
+  justify-self: end;
+  color: white;
+  font-size: 16px;
+}
+
+@include media (300px, 999px){
+  #chat{
+    width: calc(100% - 4px);
+    @include column-row(1/span 2, 2/span 1);
+  }
+}
+@include media (1000px, 1199px) {
+  #chat {
+    width: 766px;
+  }
+}
+@include media (1200px, 4000px) {
+  #chat {
+    @include column-row(1/span 1, 2/span 1);
+    display: flex;
+    border: 2px solid $teal;
+    background-color: $transparent;
+    height: 416px;
+    width: 920px;
+    justify-self: end;
+    color: white;
+    font-size: 16px;
+  }
+}
+
+.chatWindow {
+  width: calc(100% - 24px);
+  padding: 10px;
+  overflow-y: hidden;
+  word-break:break-all;
+  word-break: break-word;
+}

@@ -1,0 +1,62 @@
+<div id="nameMain" style="height:50px">
+<p id="name"></p>
+<svg id="addUsers" class="addUsers">
+  <circle cx="50%" cy="50%" r="1%" fill="transparent"/>
+  <text text-anchor="middle" alignment-baseline="middle" dominant-baseline="middle" x="50%" y="50%" fill="white">+</text>
+</svg>
+</div>
+
+<div id="main">
+
+  <ul id="chatButtons">
+    <li>
+      <svg class="button" height="32" width="40">
+        <circle cx="50%" cy="50%" r="1%" fill="transparent"/>
+        <text text-anchor="middle" alignment-baseline="middle" dominant-baseline="middle" x="50%" y="50%" fill="white">All</text>
+      </svg>
+      <i class="fas fa-times crossIcon hidden"></i>
+      <div class="messageIndicator" style="display:none">0</div>
+    </li>
+  </ul>
+
+  <div id="doubleBorder">
+    <svg id="closeButton" class="closeButton">
+      <circle cx="50%" cy="50%" r="1%" fill="transparent"/>
+      <text text-anchor="middle" alignment-baseline="middle" dominant-baseline="middle" x="50%" y="50%" fill="white">Close chats</text>
+    </svg>
+  </div>
+
+  <div id="chat">
+    <div class="chatWindow"></div>
+    <div class="scrollLine" id="chatScrollLine">
+      <div class="scrollBar"></div>
+    </div>
+  </div>
+
+  <div id="userListContainer">
+    <ul id="userList" class="userList">
+    </ul>
+    <div class="scrollLine" id="userScroll">
+      <div class="scrollBar"></div>
+    </div>
+  </div>
+
+  <div id="chatInput">
+    <textarea name="" id="inputField"></textarea>
+    <button id="submit" type="submit">
+      <svg class="submit" height="100%" width="100%">
+        <circle cx="50%" cy="50%" r="1%" fill="transparent"/>
+        <text text-anchor="middle" alignment-baseline="middle" dominant-baseline="middle" x="50%" y="50%" fill="white">Ok</text>
+      </svg>
+    </button>
+  </div>
+
+</div>
+
+<!--<script type="module" src="javascripts/chat/MAIN.js"></script>
+<script type="module" src="javascripts/chatButtons/MAIN.js"></script>
+<script type="module" src="javascripts/userListTouch/MAIN.js"></script>
+<script type="module" src="javascripts/scrollbar/MAIN.js"></script>-->
+
+<script src="javascripts/fallbackBundle/bundle.js">
+</script>

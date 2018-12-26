@@ -1,0 +1,49 @@
+div#userListContainer {
+  float: right;
+  @include column-row(2/span 1, 2/span 1);
+  display: flex;
+  width: 250px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  ul#userList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 236px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background: linear-gradient(45deg, $teal, $pink);
+    display: block;
+    color: white;
+    font-weight: bold;
+
+    li {
+      width: calc(100% - 22px);
+      margin: 1px;
+      padding: 10px;
+      background-color: $transparent;
+      border: 1px solid transparent;
+      @include flex(row, center, center);
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+}
+
+@include media(300px, 999px){
+  div#userListContainer {
+    position: absolute;
+    right: 1.5%;
+    z-index: 100;
+    transform: translateX(300px);
+      ul#userList {
+        background: linear-gradient(45deg, $bright-teal, $magenta);
+      }
+  }
+}

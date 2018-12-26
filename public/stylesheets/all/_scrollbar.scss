@@ -1,0 +1,22 @@
+@mixin border($bw, $bc) {
+  border-width: $bw;
+  border-style: solid;
+  border-color: $bc;
+  box-sizing: border-box;
+}
+
+.scrollLine {
+  width: 14px;
+  background-color: white;
+  @include border(2px, $teal);
+}
+
+.scrollBar {
+  width: 10px;
+  background-color: $magenta;
+  transition: all 0.1s ease;
+  @include border(2px, white);
+  &:hover {
+    background-color: rgba(235, 47, 145, 0.7);
+  }
+}

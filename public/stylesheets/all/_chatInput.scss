@@ -1,0 +1,72 @@
+%input-button {
+  border: 2px solid $magenta;
+  border-radius: 0px;
+  outline: none;
+}
+
+#chatInput {
+  font-size: 18px;
+  float: left;
+  @include column-row(1/span 1, 3/span 1);
+  justify-self: end;
+  margin-top: 10px;
+}
+
+@include media (300px, 999px) {
+  #chatInput {
+    width: 100%;
+    @include column-row(1/span 2, 3/span 1);
+  }
+}
+
+@include media (1000px, 1199px) {
+  #chatInput {
+    width: 770px;
+  }
+}
+@include media (1200px, 4000px) {
+  #chatInput {
+    width: 925px;
+  }
+}
+
+#chatInput > textarea {
+  float: left;
+  height: 20px;
+  @extend %input-button;
+  padding: 8px;
+  background-color: $transparent;
+  color: white;
+  font-size: 16px;
+  margin: 0px;
+}
+
+@include media (300px, 999px){
+  #chatInput > textarea {
+    width: calc(100% - 70px);
+  }
+}
+@include media (1000px, 1199px) {
+  #chatInput  > textarea {
+    width: 700px;
+  }
+}
+@include media (1200px, 4000px) {
+  #chatInput  > textarea{
+    width: 854px;
+  }
+}
+
+
+#chatInput > button {
+  padding: 0px;
+  font-size: 20px;
+  float: right;
+  width: 50px;
+  height: 40px;
+  @extend %input-button;
+  cursor: pointer;
+  background-color: $magenta;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+}

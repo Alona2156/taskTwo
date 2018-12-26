@@ -1,0 +1,87 @@
+#chatButtons {
+  float:left;
+  @include column-row(1/span 1, 1/span 1);
+  @include flex(row, flex-start, center);
+  padding: 0;
+  margin: 10px 0px;
+  flex-wrap: wrap;
+}
+
+@include media (300px, 999px){
+  #chatButtons {
+    @include column-row(1/span 2, 1/span 1);
+    width: 100%;
+  }
+}
+@include media (1000px, 1199px) {
+  #chatButtons {
+   width: 768px;
+  }
+}
+@include media (1200px, 4000px) {
+  #chatButtons {
+    width: 925px;
+  }
+}
+
+#chatButtons > li {
+  @include flex(row, flex-start, center);
+  margin-right: 10px;
+  list-style-type: none;
+  padding: 0;
+  flex-wrap: no-wrap;
+  .button {
+    @include flex(row, center, center);
+    background-color: $teal;
+    border: 2px solid $bright-teal;
+    color: rgba(235, 47, 145, 1);
+    font-size: 18px;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+}
+
+.crossIcon {
+  font-size: 12px;
+  cursor: pointer;
+  border: 3px solid $magenta;
+  padding: 5px 6px;
+  border-radius: 50%;
+  background-color: $magenta;
+  color: white;
+  box-shadow: 0 0 5px black;
+  margin-left: -12px;
+  margin-top: -36px;
+}
+
+.messageIndicator {
+  @extend .crossIcon;
+  font-weight: bold;
+  padding: 5px 8px;
+}
+
+i.hidden {
+  display: none;
+}
+
+.white {
+  animation: white 0.5s ease forwards;
+  transform-origin: 50% 50%;
+}
+
+.colorful {
+  animation: colorful 0.5s ease forwards;
+  transform-origin: 50% 50%;
+}
+
+@keyframes white {
+  0% {fill: white}
+  100% {transform:scale(100); fill: white}
+}
+
+@keyframes colorful {
+  0% {transform: scale(100); fill: white}
+  99% {transform:scale(1); fill: white}
+  100% {fill: transparent}
+}

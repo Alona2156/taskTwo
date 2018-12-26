@@ -1,0 +1,53 @@
+h1{
+  color: white;
+  font-weight: 200;
+}
+
+#indexPage {
+  @include flex(row, space-between, center);
+  a {
+    margin: 20px;
+  }
+}
+
+.formButton {
+  padding: 8px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: $bright-pink;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.form {
+  margin: 20px;
+  @include flex(column, center, center);
+  width: 250px;
+  border: 2px solid $bright-pink;
+  border-radius: 10px 0px 10px 0px;
+  padding: 10px;
+  background-color: $transparent;
+}
+
+.form > * {
+  margin: 5px;
+}
+
+input {
+  padding: 10px;
+  width: 80%;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px $bright-pink;
+}
